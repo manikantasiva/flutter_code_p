@@ -28,7 +28,7 @@ class _PostsListPageState extends State<PostsListPage> {
           style: TextStyle(color: Colors.white, fontSize: 16),
         ),
         centerTitle: true,
-        backgroundColor: app_theam_Yellow,
+        backgroundColor: app_theam_clr1,
       ),
       floatingActionButton: FloatingActionButton(
           child: Icon(Icons.add),
