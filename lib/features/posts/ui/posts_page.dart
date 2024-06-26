@@ -24,7 +24,7 @@ class _PostsListPageState extends State<PostsListPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Postsssss',
+          'Posts List',
           style: TextStyle(color: Colors.white, fontSize: 16),
         ),
         centerTitle: true,
@@ -34,7 +34,7 @@ class _PostsListPageState extends State<PostsListPage> {
           child: Icon(Icons.add),
           onPressed: () {
             print('PostAddEvent CLICKED >>>');
-            // postsBloc.add(PostAddEvent());
+            postsBloc.add(PostAddEvent());
           }),
       body: BlocConsumer<PostsBloc, PostsState>(
           bloc: postsBloc,
@@ -88,6 +88,29 @@ class _PostsListPageState extends State<PostsListPage> {
                         }),
                   ),
                 );
+
+              case PostsFetchingErrorState:
+                return Center(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset(
+                        'assets/images/nodata.jpg', // Replace with your asset image path
+                        width: 150,
+                        height: 150,
+                      ),
+                      SizedBox(height: 20),
+                      Text(
+                        'No data found',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
+                  ),
+                );
+
               default:
                 return SizedBox();
             }
