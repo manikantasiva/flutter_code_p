@@ -7,6 +7,7 @@ class PostsRepo {
     var client = http.Client();
     List<PostDataUiModel> posts = [];
     try {
+      
       var response = await client.get(
         Uri.parse('https://jsonplaceholder.typicode.com/posts'),
       );
