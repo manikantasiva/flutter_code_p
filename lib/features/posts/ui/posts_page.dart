@@ -24,7 +24,7 @@ class _PostsListPageState extends State<PostsListPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Postsssss',
+          'Postsssss  7777777',
           style: TextStyle(color: Colors.white, fontSize: 16),
         ),
         centerTitle: true,
